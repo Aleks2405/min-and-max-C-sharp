@@ -15,9 +15,12 @@ namespace модуль_2_задание_2
             int max = 0;  // иожно и первый элемент но привык 0
             int min = 0;
             int sum = 0;
-            for (int i = 0; i < arr.GetLength (0); i++)
+            int i_test = 0;
+            int j_test = 0;
+            int i_test1 = 0, j_test1 = 0;
+            for (int i = 0; i < arr.GetLength(0); i++)
             {
-                for (int j = 0;j < arr.GetLength(1);j++)
+                for (int j = 0; j < arr.GetLength(1); j++)
                 {
                     arr[i, j] = rand.Next(-100, 100);
                     Console.Write($" {arr[i, j]} ");
@@ -33,20 +36,31 @@ namespace модуль_2_задание_2
                 }
                 Console.WriteLine();
             }
-                Console.WriteLine($"max = {max}, min = {min}");
+            Console.WriteLine($"max = {max}, min = {min}");
 
-            for (int i = 0; i < arr.GetLength(0); i++)
+            Console.WriteLine();
+
+            for (int i = min; i < arr.GetLength(0); i++)
             {
-                for (int j = 0; j < arr.GetLength(1); j++) {
+                for (int j = max; j < arr.GetLength(1);j++)
+                {
+                    Console.WriteLine($"для начала попали =  {i}");
+              }
+               
+            }
 
-                    for (; min < max; arr[i,j]++)
-                        sum += arr[i,j];
-                    Console.WriteLine($" sum = {sum}");
-                }
-                    
-                }
-            Console.WriteLine($" sum = {sum}");
+            //for (int i = 0; i < arr.GetLength(0); i++)
+            //{
+            //    for (int j = 0; j < arr.GetLength(1); j++) {
+
+            //        for (; min < max; arr[i,j]++)
+            //            sum += arr[i,j];
+            //        Console.WriteLine($" sum = {sum}");
+            //    }
+
+            //    }
+            //Console.WriteLine($" sum = {sum}");
         }
-        }
+
     }
-
+}
