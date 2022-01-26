@@ -48,15 +48,16 @@ namespace модуль_2_задание_2
                     {
                         i_test1 = i;
                         j_test1 = j;
-                        
+                        Console.WriteLine($"min = {i},{j}");
                     }
                     if (arr[i, j] == max)
                     {
                         i_test = i;
                         j_test = j;
+                        Console.WriteLine($"max = {i},{j}");
 
                     }
-                    if (i_test > i_test1 || j_test>j_test1)  // подумать над данной строчкой алгоритм не правильный 
+                    if (i_test < i_test1)  // подумать над данной строчкой алгоритм не правильный 
                     {
                         int temp = 0;
                         temp = arr[i_test,j_test];
