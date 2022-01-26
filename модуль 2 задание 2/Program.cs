@@ -56,7 +56,7 @@ namespace модуль_2_задание_2
                         j_test = j;
 
                     }
-                    if (i_test > i_test1)
+                    if (i_test > i_test1 || j_test>j_test1)  // подумать над данной строчкой алгоритм не правильный 
                     {
                         int temp = 0;
                         temp = arr[i_test,j_test];
@@ -78,18 +78,20 @@ namespace модуль_2_задание_2
             }
             Console.WriteLine($"Summa = {sum}");
 
-                    //for (int i = 0; i < arr.GetLength(0); i++)
-                    //{
-                    //    for (int j = 0; j < arr.GetLength(1); j++) {
+            
 
-                    //        for (; min < max; arr[i,j]++)
-                    //            sum += arr[i,j];
-                    //        Console.WriteLine($" sum = {sum}");
-                    //    }
+            //for (int i = 0; i < arr.GetLength(0); i++)
+            //{
+            //    for (int j = 0; j < arr.GetLength(1); j++) {
 
-                    //    }
-                    //Console.WriteLine($" sum = {sum}");
-                }
+            //        for (; min < max; arr[i,j]++)
+            //            sum += arr[i,j];
+            //        Console.WriteLine($" sum = {sum}");
+            //    }
+
+            //    }
+            //Console.WriteLine($" sum = {sum}");
+        }
 
     }
 }
