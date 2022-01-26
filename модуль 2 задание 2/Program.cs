@@ -56,17 +56,27 @@ namespace модуль_2_задание_2
                         j_test = j;
 
                     }
+                    if (i_test > i_test1)
+                    {
+                        int temp = 0;
+                        temp = arr[i_test,j_test];
+                        arr[i_test, j_test] = arr[i_test1, j_test1];
+                        arr[i_test1, j_test1] = temp;
+
+                    }
                 }
                              
             }
-            for (int i = i_test1; i < i_test;i++ )
+            for (int i = i_test1; i <= i_test;i++ )
             {
-                for (int j = j_test1; j < j_test; j++)
+                for (int j = j_test1; j <=j_test; j++)
                 {
                     Console.Write($" {arr[i, j]} ");
+                    sum += arr[i,j];
                 }
                 Console.WriteLine();
             }
+            Console.WriteLine($"Summa = {sum}");
 
                     //for (int i = 0; i < arr.GetLength(0); i++)
                     //{
