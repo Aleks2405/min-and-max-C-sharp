@@ -40,27 +40,46 @@ namespace модуль_2_задание_2
 
             Console.WriteLine();
 
-            for (int i = min; i < arr.GetLength(0); i++)
+            for (int i = 0; i < arr.GetLength(0); i++)
             {
-                for (int j = max; j < arr.GetLength(1);j++)
+                for (int j = 0; j < arr.GetLength(1);j++)
                 {
-                    Console.WriteLine($"для начала попали =  {i}");
-              }
-               
+                    if (arr[i, j] == min)
+                    {
+                        i_test1 = i;
+                        j_test1 = j;
+                        
+                    }
+                    if (arr[i, j] == max)
+                    {
+                        i_test = i;
+                        j_test = j;
+
+                    }
+                }
+                             
+            }
+            for (int i = i_test1; i < i_test;i++ )
+            {
+                for (int j = j_test1; j < j_test; j++)
+                {
+                    Console.Write($" {arr[i, j]} ");
+                }
+                Console.WriteLine();
             }
 
-            //for (int i = 0; i < arr.GetLength(0); i++)
-            //{
-            //    for (int j = 0; j < arr.GetLength(1); j++) {
+                    //for (int i = 0; i < arr.GetLength(0); i++)
+                    //{
+                    //    for (int j = 0; j < arr.GetLength(1); j++) {
 
-            //        for (; min < max; arr[i,j]++)
-            //            sum += arr[i,j];
-            //        Console.WriteLine($" sum = {sum}");
-            //    }
+                    //        for (; min < max; arr[i,j]++)
+                    //            sum += arr[i,j];
+                    //        Console.WriteLine($" sum = {sum}");
+                    //    }
 
-            //    }
-            //Console.WriteLine($" sum = {sum}");
-        }
+                    //    }
+                    //Console.WriteLine($" sum = {sum}");
+                }
 
     }
 }
