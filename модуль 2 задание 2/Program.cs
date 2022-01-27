@@ -56,52 +56,66 @@ namespace модуль_2_задание_2
                 for (int j = 0; j < arr.GetLength(1);j++)
                 {
                 
-                    if (i_test <  i_test1 | j_test< j_test1)  // меняем элемент 
-                    {
-                                var temp = 0;
-                                temp = arr[i_test, j_test];
-                                arr[i_test, j_test] = arr[i_test1, j_test1];
-                                arr[i_test1, j_test1] = temp;
+                    //if (i_test <  i_test1 | j_test< j_test1)  // меняем элемент 
+                    //{
+                    //            var temp = 0;
+                    //            temp = arr[i_test, j_test];
+                    //            arr[i_test, j_test] = arr[i_test1, j_test1];
+                    //            arr[i_test1, j_test1] = temp;
                      
-                    }
+                    //}
                    
                 }  
                 
             }
-            for (int i = i_test; i <= i_test1; i++)
-            {
-                for (int j = j_test; j == j_test1; j++)
-                {
-                    Console.Write($" {arr[i, j]} ");
-                    sum += arr[i, j];
-                    
-
-                }
-                Console.WriteLine();
-            }
-            Console.WriteLine($"Summa = {sum}");
-
+            int k = 0;
             for (int i = 0; i < arr.GetLength(0); i++)
             {
                 for (int j = 0; j < arr.GetLength(1); j++)
-                {
-                    Console.Write($" {arr[i, j]} ");
-                }
-                Console.WriteLine();
-            }
-            Console.WriteLine();
-
-            for (int i = i_test1; i <= i_test; i++)
-            {
-                for (int j = j_test1; j == j_test; j++)
-                {
-                    Console.Write($" {arr[i, j]} ");
-                    sum += arr[i, j];
+                { 
+                    if (i == i_test && j == j_test)
+                    {
+                        ++k;
+                        continue;
+                    }
+                    if (i == i_test1 && j == j_test1)
+                    {
+                        ++k;
+                        continue;
+                    }
+                    if (k == 1)
+                    {
+                        Console.Write($" {arr[i, j]} ");
+                        sum += arr[i, j];
+                    }
 
                 }
                 Console.WriteLine();
             }
             Console.WriteLine($"Summa = {sum}");
+
+
+            //for (int i = 0; i < arr.GetLength(0); i++)
+            //{
+            //    for (int j = 0; j < arr.GetLength(1); j++)
+            //    {
+            //        Console.Write($" {arr[i, j]} ");
+            //    }
+            //    Console.WriteLine();
+            //}
+            //Console.WriteLine();
+
+            //for (int i = i_test1; i <= i_test; i++)
+            //{
+            //    for (int j = j_test1; j == j_test; j++)
+            //    {
+            //        Console.Write($" {arr[i, j]} ");
+            //        sum += arr[i, j];
+
+            //    }
+            //    Console.WriteLine();
+            //}
+            //Console.WriteLine($"Summa = {sum}");
            
 
 
