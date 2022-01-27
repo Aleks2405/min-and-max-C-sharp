@@ -56,24 +56,17 @@ namespace модуль_2_задание_2
                 for (int j = 0; j < arr.GetLength(1);j++)
                 {
                 
-                    if (i_test <  i_test1 | j_test< j_test1)  // подумать над данной строчкой алгоритм не правильный 
+                    if (i_test <  i_test1 | j_test< j_test1)  // меняем элемент 
                     {
-                        for (i = 0; i < arr.GetLength(0); i++)
-                        {
-                            for ( j = 0; j < arr.GetLength(1); j++)
-                            {
                                 var temp = 0;
                                 temp = arr[i_test, j_test];
                                 arr[i_test, j_test] = arr[i_test1, j_test1];
                                 arr[i_test1, j_test1] = temp;
-                            }
-                        }
-
-                    }
-                   
-                }
-                             
+                     
+                    }                   
+                }                             
             }
+
             for (int i = 0; i < arr.GetLength(0); i++)
             {
                 for (int j = 0; j < arr.GetLength(1); j++)
@@ -84,9 +77,9 @@ namespace модуль_2_задание_2
             }
             Console.WriteLine();
 
-            for (int i = i_test1; i < i_test; i++ )
+            for (int i = i_test1; i <= i_test; i++ )
             {
-                for (int j = j_test1; j < arr.GetLength(1); j++)
+                for (int j = j_test1; j <=j_test ; j++)
                 {
                     Console.Write($" {arr[i, j]} ");
                     sum += arr[i,j];
