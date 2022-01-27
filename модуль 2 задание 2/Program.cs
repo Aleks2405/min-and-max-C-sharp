@@ -56,7 +56,7 @@ namespace модуль_2_задание_2
                 for (int j = 0; j < arr.GetLength(1);j++)
                 {
                 
-                    //if (i_test <  i_test1 | j_test< j_test1)  // меняем элемент 
+                    //if (i_test <  i_test1 | j_test< j_test1)  // меняем элемент не буду удать мало ли пригодится для абгрейда
                     //{
                     //            var temp = 0;
                     //            temp = arr[i_test, j_test];
@@ -68,59 +68,34 @@ namespace модуль_2_задание_2
                 }  
                 
             }
-            int k = 0;
+            int count = 0;
             for (int i = 0; i < arr.GetLength(0); i++)
             {
                 for (int j = 0; j < arr.GetLength(1); j++)
                 { 
                     if (i == i_test && j == j_test)
                     {
-                        ++k;
+                        ++count;
                         continue;
                     }
                     if (i == i_test1 && j == j_test1)
                     {
-                        ++k;
+                        ++count;
                         continue;
                     }
-                    if (k == 1)
+                    if (count == 1)
                     {
-                        Console.Write($" {arr[i, j]} ");
+
+                        Console.Write($" { arr[i, j] } ");
                         sum += arr[i, j];
                     }
 
                 }
                 Console.WriteLine();
             }
-            Console.WriteLine($"Summa = {sum}");
-
-
-            //for (int i = 0; i < arr.GetLength(0); i++)
-            //{
-            //    for (int j = 0; j < arr.GetLength(1); j++)
-            //    {
-            //        Console.Write($" {arr[i, j]} ");
-            //    }
-            //    Console.WriteLine();
-            //}
-            //Console.WriteLine();
-
-            //for (int i = i_test1; i <= i_test; i++)
-            //{
-            //    for (int j = j_test1; j == j_test; j++)
-            //    {
-            //        Console.Write($" {arr[i, j]} ");
-            //        sum += arr[i, j];
-
-            //    }
-            //    Console.WriteLine();
-            //}
-            //Console.WriteLine($"Summa = {sum}");
-           
-
-
-
-        }
+            
+            Console.WriteLine($"Summa = {sum} ");
+          }
 
     }
 }
