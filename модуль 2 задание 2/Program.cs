@@ -63,9 +63,23 @@ namespace модуль_2_задание_2
                                 arr[i_test, j_test] = arr[i_test1, j_test1];
                                 arr[i_test1, j_test1] = temp;
                      
-                    }                   
-                }                             
+                    }
+                   
+                }  
+                
             }
+            for (int i = i_test; i <= i_test1; i++)
+            {
+                for (int j = j_test; j == j_test1; j++)
+                {
+                    Console.Write($" {arr[i, j]} ");
+                    sum += arr[i, j];
+                    
+
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine($"Summa = {sum}");
 
             for (int i = 0; i < arr.GetLength(0); i++)
             {
@@ -77,30 +91,20 @@ namespace модуль_2_задание_2
             }
             Console.WriteLine();
 
-            for (int i = i_test1; i <= i_test; i++ )
+            for (int i = i_test1; i <= i_test; i++)
             {
-                for (int j = j_test1; j <=j_test ; j++)
+                for (int j = j_test1; j == j_test; j++)
                 {
                     Console.Write($" {arr[i, j]} ");
-                    sum += arr[i,j];
+                    sum += arr[i, j];
+
                 }
                 Console.WriteLine();
             }
             Console.WriteLine($"Summa = {sum}");
 
-            
 
-            //for (int i = 0; i < arr.GetLength(0); i++)
-            //{
-            //    for (int j = 0; j < arr.GetLength(1); j++) {
 
-            //        for (; min < max; arr[i,j]++)
-            //            sum += arr[i,j];
-            //        Console.WriteLine($" sum = {sum}");
-            //    }
-
-            //    }
-            //Console.WriteLine($" sum = {sum}");
         }
 
     }
