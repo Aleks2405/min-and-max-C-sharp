@@ -102,6 +102,7 @@ namespace модуль_2_задание_2
                 Console.WriteLine();
             }
             Console.WriteLine($"Summa = {sum}");
+           
 
 
 
